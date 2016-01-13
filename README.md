@@ -2,7 +2,7 @@
 
 For Stencyl 3.3 Build 8364 and above
 
-Stencyl extension for "Batch" (http://www.batch.com)on iOS and Android. This extension allows you to easily integrate Batch on your Stencyl game / application. (http://www.stencyl.com)
+Stencyl extension for "Batch" (http://www.batch.com) on iOS and Android. This extension allows you to easily integrate Batch on your Stencyl game / application. (http://www.stencyl.com)
 
 ## Main Features
 
