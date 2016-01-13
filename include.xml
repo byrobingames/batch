@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+    <section if="ios">
+        <ndll name="batchextension" />
+        
+        <dependency path="frameworks/Batch.embeddedframework/Batch.framework"/>
+        <dependency name="sqlite3" />
+        <ios linker-flags="-ObjC" />
+        <!--<template path="templates" />-->
+    </section>
+	
+	<!-- Use the following for an Android Java extension, not needed otherwise -->
+	
+	<dependency name="batchextension" path="dependencies/android" if="android" />
+	<android extension="com.byrobin.batch.BatchExtension" />
+	
+</project>
