@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette>
+    
+    <block tag="initBatchExtension" spec="Start Batch with KEY: %0 and GCM Sender ID(android only): %1 [c:batch]" code="BatchExtension.initBatch(~,~);" help="GCM Sender ID is only for Android, leave blank for iOS" type="action" color="purple" returns="void">
+        <fields>
+            <text order="0"></text>
+            <text order="1"></text>
+        </fields>
+    </block>
+    
+    <block tag="batchRedeemOfferFeature" spec="%0" code="~" type="normal" color="green" returns="text" hidden="true">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Reference" code="e.arg2" />
+                    <c text="Value" code="e.arg3" />
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+    
+    <block tag="batchRedeemOfferRessource" spec="%0" code="~" type="normal" color="green" returns="text" hidden="true">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Reference" code="e.arg2" />
+                    <c text="Quantity" code="e.arg3" />
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+    
+    <block tag='Batch_addEventListenerFeature' spec='Unlock feature to the user. %1 [c:batch]' code='BatchExtension.addEventListener("REDEEM_OFFER", onReceiveRedeemOfferFeature);&#xA; public static function onReceiveRedeemOfferFeature(e:BatchEvent) {&#xA; if(e.arg1 == "FEATER")&#xA; { &#xA; ~ &#xA; } &#xA; };' type='wrapper' color='purple' returns='void'>
+        <fields>
+            <CODE_BLOCK order='0'></CODE_BLOCK>
+            <attached-block order='1' tag='batchRedeemOfferFeature'/>
+        </fields>
+    </block>
+    
+    <block tag='Batch_addEventListenerRessource' spec='Provide resource quantity to the user. %1 [c:batch]' code='BatchExtension.addEventListener("REDEEM_OFFER", onReceiveRedeemOfferRessource);&#xA; public static function onReceiveRedeemOfferRessource(e:BatchEvent) {&#xA; if(e.arg1 == "RESSOURCE") &#xA; { &#xA; ~ &#xA; } &#xA;};' type='wrapper' color='purple' returns='void'>
+        <fields>
+            <CODE_BLOCK order='0'></CODE_BLOCK>
+            <attached-block order='1' tag='batchRedeemOfferRessource'/>
+        </fields>
+    </block>
+    
+</palette>
