@@ -10,12 +10,15 @@ import neko.Lib;
 import openfl.utils.JNI;
 #end
 
-import flash.events.Event;
-import flash.events.EventDispatcher;
-
-class BatchExtension extends Event {
+class BatchExtension {
 	
-	public static var dispatcher = new EventDispatcher ();
+	 public static var FEATER_Reference:String = "";
+	 public static var FEATER_Value:String = "";
+	 public static var RESSOURCE_Reference:String = "";
+	 public static var RESSOURCE_Quantity:String = "";
+	
+	public function new () {
+	}
 	
 	public static function initBatch (key:String, gcm_sender_id:String = ""):Void {
 		
@@ -28,7 +31,7 @@ class BatchExtension extends Event {
 		if (batchextension_init_method_jni == null)
 			batchextension_init_method_jni = JNI.createStaticMethod ("com.byrobin.batch.BatchExtension", "initBatch", "(Ljava/lang/String;Ljava/lang/String;Lorg/haxe/lime/HaxeObject;)V");
 			
-		batchextension_init_method_jni(key, gcm_sender_id, new BatchHandler());
+		batchextension_init_method_jni(key, gcm_sender_id, new BatchExtension());
 		
 		#else
 			
@@ -36,8 +39,52 @@ class BatchExtension extends Event {
 		
 	}
 
-
-
+	public static function setRedeemOffer(type:String = "", arg1:String = "", arg2:String = "", arg3:String = ""):Void {
+	
+		if (type == "REDEEM_OFFER") 
+		{
+			if(arg1 == "FEATER")
+			{
+				FEATER_Reference = arg2;
+				FEATER_Value = arg3;	
+			}
+			else if(arg1 == "RESSOURCE")
+			{
+				RESSOURCE_Reference = arg2;
+				RESSOURCE_Quantity = arg3;
+			}
+			else
+			{
+				return;
+			}
+		}
+		else if(type == "INIT")
+		{
+			//do stuff when batch succesfully is init.
+		}
+	
+	}
+	
+	public static function getRedeemOffer(offer:Int):String {
+	
+		if(offer == 0){
+			return FEATER_Reference;
+		}
+		else if(offer == 1){
+			return FEATER_Value;
+		}
+		else if(offer == 2){
+			return RESSOURCE_Reference;
+		}
+		else if(offer == 3){
+			return RESSOURCE_Quantity;
+		}
+		else{
+			return null;
+		}
+	}
+	
+	
 	private static function notifyListeners (inEvent:Dynamic):Void {
 		
 		#if ios
@@ -51,40 +98,21 @@ class BatchExtension extends Event {
 		trace(arg2);
 		trace(arg3);
 		
-		dispatchEvent(new BatchEvent("REDEEM_OFFER", arg1, arg2, arg3));
-		
-		#end
-	}
-	
-	
-	
-	
-	public static function addEventListener (type:String, listener:Dynamic, useCapture:Bool = false, priority:Int = 0, useWeakReference:Bool = false):Void {
-		
-		dispatcher.addEventListener (type, listener, useCapture, priority, useWeakReference);
+		setRedeemOffer(type, arg1, arg2, arg3);
 		
 	}
-
-	public static function removeEventListener (type:String, listener:Dynamic, capture:Bool = false):Void {
+	#end
+	
+	#if android
+	public function batchEventReceipt (type:String, arg1:String, arg2:String, arg3:String):Void {
+		trace(type);
+		trace(arg1);
+		trace(arg2);
+		trace(arg3);
 		
-		dispatcher.removeEventListener (type, listener, capture);
-		
+		setRedeemOffer(type, arg1, arg2, arg3);
 	}
-	
-	public static function dispatchEvent (event:Event):Bool {
-		
-		return dispatcher.dispatchEvent (event);
-		
-	}
-	
-	public static function hasEventListener (type:String):Bool {
-		
-		return dispatcher.hasEventListener (type);
-		
-	}
-	
-	
-	
+	#end
 	
 	#if android
 	private static var batchextension_init_method_jni:Dynamic;
@@ -96,33 +124,3 @@ class BatchExtension extends Event {
 }
 
 	
-private class BatchHandler {
-
-	public function new () {
-	}
-	
-	public function batchEventReceipt (type:String, arg1:String, arg2:String, arg3:String):Void {
-		trace(type);
-		trace(arg1);
-		trace(arg2);
-		trace(arg3);
-		
-		if (type == "REDEEM_OFFER") {
-				BatchExtension.dispatcher.dispatchEvent(new BatchEvent("REDEEM_OFFER", arg1, arg2, arg3));
-		}
-	}
-}
-
-class BatchEvent extends Event {
-	
-	public var arg1:String;
-	public var arg2:String;
-	public var arg3:String;
-	
-	public function new (type:String, arg1:String = "", arg2:String = "", arg3:String = "") {
-		super (type);
-		this.arg1 = arg1;
-		this.arg2 = arg2;
-		this.arg3 = arg3;
-	}
-}
