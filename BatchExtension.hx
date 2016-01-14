@@ -84,10 +84,8 @@ class BatchExtension {
 		}
 	}
 	
-	
+	#if ios
 	private static function notifyListeners (inEvent:Dynamic):Void {
-		
-		#if ios
 		
 		var type = Std.string (Reflect.field (inEvent, "type"));
 		var arg1 = Std.string (Reflect.field (inEvent, "arg1"));
