@@ -7,7 +7,7 @@ Stencyl extension for "Batch" (http://www.batch.com) on iOS and Android. This ex
 ## Main Features
 
   * Register to batch.
-  * Unlock Feature and Ressource (listen to onRedeemAutomaticOffer)
+  * Unlock Feature and Ressource
   * Push Notification service.
 
 
