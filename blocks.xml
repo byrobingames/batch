@@ -9,7 +9,7 @@
     </block>
 
 
-    <block tag="batchRedeemOffer" spec="%0" code="BatchExtension.getRedeemOffer(~)" help="Returns Redeem offer as text" type="normal" color="purple" returns="text">
+    <block tag="batchRedeemOffer" spec="%0 [c:batch]" code="BatchExtension.getRedeemOffer(~)" help="Returns Redeem offer as text" type="normal" color="purple" returns="text">
         <fields>
             <dropdown order="0">
                 <choices>
