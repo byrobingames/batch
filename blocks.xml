@@ -8,16 +8,19 @@
         </fields>
     </block>
     
-    <block tag="batchRedeemOfferFeature" spec="%0" code="~" type="normal" color="green" returns="text" hidden="true">
+    <block tag="batchRedeemOffer" spec="%0" code="BatchExtension.getRedeemOffer(~)" help="Returns Redeem offer as text" type="normal" color="purple" returns="text">
         <fields>
             <dropdown order="0">
                 <choices>
-                    <c text="Reference" code="e.arg2" />
-                    <c text="Value" code="e.arg3" />
+                    <c text="Feature Reference" code="0" />
+                    <c text="Feature Value" code="1" />
+                    <c text="Ressource Reference" code="2" />
+                    <c text="Ressource Quantity" code="3" />
                 </choices>
             </dropdown>
         </fields>
     </block>
+<<<<<<< Updated upstream
     
     <block tag="batchRedeemOfferRessource" spec="%0" code="~" type="normal" color="green" returns="text" hidden="true">
         <fields>
@@ -45,3 +48,6 @@
     </block>
     
 </palette>
+=======
+</palette>
+>>>>>>> Stashed changes
