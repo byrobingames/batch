@@ -30,14 +30,14 @@
         </fields>
     </block>
     
-    <block tag='Batch_addEventListenerFeature' spec='Unlock feature to the user. %1 [c:batch]' code='BatchExtension.addEventListener("REDEEM_OFFER", onReceiveRedeemOfferFeature);&#xA; public static function onReceiveRedeemOfferFeature(e:BatchEvent) {&#xA; if(e.arg1 == "FEATER")&#xA; { &#xA; ~ &#xA; } &#xA; };' type='wrapper' color='purple' returns='void'>
+    <block tag='Batch_addEventListenerFeature' spec='Unlock feature to the user. %1 [c:batch]' code='BatchExtension.addEventListener("REDEEM_OFFER", onReceiveRedeemOfferFeature);&#xA; function onReceiveRedeemOfferFeature(e:BatchEvent) {&#xA; if(e.arg1 == "FEATER")&#xA; { &#xA; ~ &#xA; } &#xA; };' type='wrapper' color='purple' returns='void'>
         <fields>
             <CODE_BLOCK order='0'></CODE_BLOCK>
             <attached-block order='1' tag='batchRedeemOfferFeature'/>
         </fields>
     </block>
     
-    <block tag='Batch_addEventListenerRessource' spec='Provide resource quantity to the user. %1 [c:batch]' code='BatchExtension.addEventListener("REDEEM_OFFER", onReceiveRedeemOfferRessource);&#xA; public static function onReceiveRedeemOfferRessource(e:BatchEvent) {&#xA; if(e.arg1 == "RESSOURCE") &#xA; { &#xA; ~ &#xA; } &#xA;};' type='wrapper' color='purple' returns='void'>
+    <block tag='Batch_addEventListenerRessource' spec='Provide resource quantity to the user. %1 [c:batch]' code='BatchExtension.addEventListener("REDEEM_OFFER", onReceiveRedeemOfferRessource);&#xA; function onReceiveRedeemOfferRessource(e:BatchEvent) {&#xA; if(e.arg1 == "RESSOURCE") &#xA; { &#xA; ~ &#xA; } &#xA;};' type='wrapper' color='purple' returns='void'>
         <fields>
             <CODE_BLOCK order='0'></CODE_BLOCK>
             <attached-block order='1' tag='batchRedeemOfferRessource'/>
