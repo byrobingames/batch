@@ -4,7 +4,14 @@ For Stencyl 3.3 Build 8364 and above
 
 Stencyl extension for "Batch" (http://www.batch.com) on iOS and Android. This extension allows you to easily integrate Batch on your Stencyl game / application. (http://www.stencyl.com)
 
-This extension does not work with Heyzap and Tapdaq extension.
+### Important!!
+
+This extension is using a custom "PROJ.xcodeproj" file to enable Push Notification in Xcode files. It wil no harm for your game.
+
+Does not work with the following extensions:
+- Heyzap Extension
+- Tapdaq Extension
+
 If you want to create a game with this and with above extension, you can ask me and i make it happen for your. Not for FREE.
 
 ## Main Features
@@ -20,6 +27,7 @@ Step 1- Download zip file on the right of the screen. ![download](http://www.byr
 
 Step 2- Install the zip file: Go to : http://community.stencyl.com/index.php/topic,30432.0.html
 
+IOS ONLY for ANDROID go to Step 6.
 Step 3- Go to https://developer.apple.com/membercenter/index.action#accountSummary to get your Team Id from your account. 
 
 Step 4- Go to batch extension folder ../stencylworks/engine-extensions/batch-master
