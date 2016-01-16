@@ -3,7 +3,9 @@
 	
     <section if="ios">
         
-        <!--Repclace "YOUR_TEAM_ID" with your real Team id from:https://developer.apple.com/membercenter/index.action#accountSummary -->
+        <!--Repclace "YOUR_TEAM_ID" with your real Team id from:https://developer.apple.com/membercenter/index.action#accountSummary 
+         example: <setenv name="TEAM_ID" value="12345678" />-->
+        
         <setenv name="TEAM_ID" value="YOUR_TEAM_ID" />
         
         <echo value='|----------------------------------------------------------------------------|'/>
