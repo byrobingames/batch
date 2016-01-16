@@ -27,7 +27,7 @@ Step 1- Download zip file on the right of the screen. ![download](http://www.byr
 
 Step 2- Install the zip file: Go to : http://community.stencyl.com/index.php/topic,30432.0.html
 
-IOS ONLY: (ANDROID go to Step 6.)<br/>
+IOS ONLY step 3-5 will enable Push Notification in Xcode (For ANDROID go to Step 6.)<br/>
 Step 3- Go to https://developer.apple.com/membercenter/index.action#accountSummary to get your Team Id from your account. 
 
 Step 4- Go to batch extension folder ../stencylworks/engine-extensions/batch-master
