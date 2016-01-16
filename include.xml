@@ -2,9 +2,23 @@
 <project>
 	
     <section if="ios">
-        <ndll name="batchextension" />
         
-        <!--<ios linker-flags="-force_load /Classes/Batch.framework/Batch" />-->
+        <!--Repclace "YOUR_TEAM_ID" with your real Team id from:https://developer.apple.com/membercenter/index.action#accountSummary -->
+        <setenv name="TEAM_ID" value="YOUR_TEAM_ID" />
+        
+        <echo value='|----------------------------------------------------------------------------|'/>
+        <echo value='|                             /!\ Batch Extension /!\                        |'/>
+        <echo value='|----------------------------------------------------------------------------|'/>
+        <echo value='| Add YOUR IOS TEAM ID to include.xml inside batch extension folder          |'/>
+        <echo value='|----------------------------------------------------------------------------|'/>
+        <echo value='|1-Go to https://developer.apple.com/membercenter/index.action#accountSummary|'/>
+        <echo value='| to get your Team Id from your account.                                     |'/>
+        <echo value='|2-Open include.xml file in stencylworks/engine-extensions/batch-master/     |'/>
+        <echo value='|3-Replace:"YOUR_TEAM_ID" with your real Team Id                             |'/>
+        <echo value='|                                                                            |'/>
+        <echo value='|----------------------------------------------------------------------------|'/>
+        
+        <ndll name="batchextension" />
         
         <dependency path="frameworks/Batch.embeddedframework/Batch.framework"/>
         <dependency name="sqlite3" />
@@ -13,7 +27,7 @@
         <template path="templates" />
     </section>
 	
-	<!-- Use the following for an Android Java extension, not needed otherwise -->
+	
 	<section if="android">
         <template path="templates" />
         <dependency name="batchextension" path="dependencies/batch" />
