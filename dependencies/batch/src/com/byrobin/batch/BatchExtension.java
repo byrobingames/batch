@@ -25,6 +25,7 @@ import java.util.Map;
 
 import android.util.Log;
 import org.haxe.lime.HaxeObject;
+import org.haxe.extension.Extension;
 
 public class BatchExtension extends Extension {
 	

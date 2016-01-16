@@ -1,7 +1,0 @@
--keep class com.batch.** {
-    *;
-}
-
--keep class com.google.android.gms.** {
-    *;
-}
