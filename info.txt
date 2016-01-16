@@ -2,5 +2,5 @@ name=Batch Extension iOS/Android
 description=Implements Batch.com
 author=Robin Schaafsma (www.byrobingames.com)
 website=http://www.stencyl.com
-version=0.4
+version=0.5
 compatibility=mobile
