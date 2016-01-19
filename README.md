@@ -38,6 +38,8 @@ Step 6- ready to build..
 
 ## Documentation and Blocks Example
 
+Documentation: https://dashboard.batch.com/doc
+
 Step 1: Follow the install instructions if you did not install the extension yet.
 
 Step 2: Create an account maak een account on http://www.batch.com and add your game(s).
