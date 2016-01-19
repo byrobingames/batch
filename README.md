@@ -6,7 +6,7 @@ Stencyl extension for "Batch" (http://www.batch.com) on iOS and Android. This ex
 
 ### Important!!
 
-This extension is using a custom "PROJ.xcodeproj" file to enable Push Notification in Xcode files. It wil no harm for your game.
+This extension is using a custom "PROJ.xcodeproj" file to enable Push Notification in Xcode. It wil no harm for your game.
 
 Does not work with the following extensions:
 - Heyzap Extension
@@ -38,7 +38,18 @@ Step 6- ready to build..
 
 ## Documentation and Blocks Example
 
-//TODO
+Step 1: Follow the install instructions if you did not install the extension yet.
+
+Step 2: Create an account maak een account on http://www.batch.com and add your game(s).
+
+Step 3:Init Batch SDK on your first (loading) scene (This will enable Push Notification)
+![batchload](http://www.byrobingames.com/stencyl/batch/batchloadingscene.jpg)
+
+Step 4: Create your unlock reference on Batch Dashboard (only if you want to use the Unlock service else skip step 4 and 5):
+![batchdashboard](http://www.byrobingames.com/stencyl/batch/batchdashboard.jpg)
+
+Step 5: Setting up unlock blocks on your game:
+![batchstartscene](http://www.byrobingames.com/stencyl/batch/batchstartscene.jpg)
 
 ## Donate
 
