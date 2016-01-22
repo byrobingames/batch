@@ -3,30 +3,12 @@
 	
     <section if="ios">
         
-        <!--Repclace "YOUR_TEAM_ID" with your real Team id from:https://developer.apple.com/membercenter/index.action#accountSummary 
-         example: <setenv name="TEAM_ID" value="12345678" />-->
-        
-        <setenv name="TEAM_ID" value="YOUR_TEAM_ID" />
-        
-        <echo value='|----------------------------------------------------------------------------|'/>
-        <echo value='|                             /!\ Batch Extension /!\                        |'/>
-        <echo value='|----------------------------------------------------------------------------|'/>
-        <echo value='| Add YOUR IOS TEAM ID to include.xml inside batch extension folder          |'/>
-        <echo value='|----------------------------------------------------------------------------|'/>
-        <echo value='|1-Go to https://developer.apple.com/membercenter/index.action#accountSummary|'/>
-        <echo value='| to get your Team Id from your account.                                     |'/>
-        <echo value='|2-Open include.xml file in stencylworks/engine-extensions/batch-master/     |'/>
-        <echo value='|3-Replace:"YOUR_TEAM_ID" with your real Team Id                             |'/>
-        <echo value='|                                                                            |'/>
-        <echo value='|----------------------------------------------------------------------------|'/>
-        
         <ndll name="batchextension" />
         
         <dependency path="frameworks/Batch.embeddedframework/Batch.framework"/>
         <dependency name="sqlite3" />
         <ios linker-flags="-ObjC" />
         
-        <template path="templates" />
     </section>
 	
 	
