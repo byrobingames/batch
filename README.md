@@ -29,7 +29,7 @@ The .ipa that is created by Stencyl will not allow you to upload it to the App S
 <br/>
 If you are ready to publish your game to the App Store, follow this tutorial how to upload your game to the App Store.<br/>
 (Testing your game with Stencyl is no problem)<br/>
-https://github.com/byrobingames/batch/wiki/IOS-Build-and-Publish-to-iTunes-Connect-with-Xcode]https://github.com/byrobingames/batch/wiki/IOS-Build-and-Publish-to-iTunes-Connect-with-Xcode<br/>
+https://github.com/byrobingames/batch/wiki/IOS-Build-and-Publish-to-iTunes-Connect-with-Xcode <br/>
 
 ## Blocks Example
 Step 1: Follow the install instructions if you did not install the extension yet.
