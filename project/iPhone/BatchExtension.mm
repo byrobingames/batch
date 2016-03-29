@@ -1,9 +1,6 @@
 #include "Utils.h"
 #import <UIKit/UIKit.h>
 #import <Batch/Batch.h>
-//#import <Batch.h>
-//#import <BatchUnlock.h>
-//#import <BatchPush.h>
 
 extern "C" void sendBatchEvent(const char* type, const char* arg1, const char* arg2, const char* arg3);
 

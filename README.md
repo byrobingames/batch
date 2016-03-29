@@ -14,9 +14,17 @@ Many thanks to riki82 (Riccardo Mattavelli) for the block examples and iOS Publi
 
 ## How to Install
 
-Step 1- Download zip file on the right of the screen. ![download](http://www.byrobingames.com/stencyl/heyzap/download.png) on this page  https://github.com/byrobingames/batch<br />
+Go to: http://byrobin.nl/store/product/batch-push-notifications-for-ios-and-android-stencylopenfl/
 
-Step 2- Install the zip file: Go to : http://community.stencyl.com/index.php/topic,30432.0.html
+Add the extension to the cart en proceed with checkout. After you successfully placed the order, you will get an e-mail with the download link or go to “My Account” section where you can also find the download link.
+
+Or 
+
+Use the "Download Zip" from this page
+
+Free Extension is named “master.zip” when you download.
+
+Install the zip file: Go to : http://community.stencyl.com/index.php/topic,30432.0.html
 
 ## Documentation
 
